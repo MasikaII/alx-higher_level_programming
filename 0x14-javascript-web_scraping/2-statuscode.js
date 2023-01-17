@@ -5,5 +5,5 @@ const API_URL = process.argv[2];
 
 request.get(API_URL, function (error, response, body) {
   statusCode = response.statusCode;
-  console.log(`statusCode: ${statusCode}`);
+  console.log(`code: ${statusCode}`);
 });
