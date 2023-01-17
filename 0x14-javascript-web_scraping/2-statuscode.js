@@ -1,8 +1,9 @@
 #!/usr/bin/node
 
 const request = require('request');
-const file = process.argv[2];
+const API_URL = process.argv[2];
 
-request.get(file.on('response', function (response) {
-  console.log(`code: ${response.statusCode}`);
+request.get(API_URL, function (error, response, body) {
+  statusCode = response.statusCode;
+  console.log(`statusCode: ${statusCode}`);
 });
